@@ -31,6 +31,10 @@ main {
   grid-gap: $spacing;
   grid-template-columns: 1fr;
 
+  * {
+    border-radius: 1rem;
+  }
+
   @media screen and (min-width: 540px){
 
     & {
@@ -53,6 +57,17 @@ main {
 
     & {
       grid-template-columns: repeat(4, 1fr);
+      grid-gap: $spacing * .9;
+
+      * {
+        transform: scale(.9);
+        transition: transform .5s;
+      }
+
+      *:hover {
+        transform: scale(1);
+      }
+
     }
 
 
