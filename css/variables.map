@@ -5,7 +5,7 @@
 		"../scss/variables.scss"
 	],
 	"sourcesContent": [
-		"$spacing: 2rem;\n"
+		"$spacing: 2rem;\n$corners: 10px;\n"
 	],
 	"names": [],
 	"mappings": ""

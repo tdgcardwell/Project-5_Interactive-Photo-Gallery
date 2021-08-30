@@ -26,13 +26,30 @@ main {
   margin-bottom: 0;
 }
 
+.search {
+  padding: 1rem;
+  border-radius: $corners;
+  border: 2px solid #ccc;
+  width:65%;
+  color: #ccc;
+  transition: width 1s,
+              color 1s;
+
+
+  &:focus {
+    width:90%;
+    color: #333;
+  }
+
+}
+
 .photo-grid {
   display: grid;
   grid-gap: $spacing;
   grid-template-columns: 1fr;
 
   * {
-    border-radius: 1rem;
+    border-radius: $corners;
 
     img {
       width: 100%;
