@@ -60,6 +60,8 @@ main {
   img {
     border-radius: $corners;
     width: 100%;
+
+    // I'm sure there's a better way to prevent the images growing too much at Desktop size, but this works for now.
     max-width: 300px;
   }
 
