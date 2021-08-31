@@ -48,13 +48,9 @@ main {
   grid-gap: $spacing;
   grid-template-columns: 1fr;
 
-  * {
+  img {
     border-radius: $corners;
-
-    img {
-      width: 100%;
-    }
-
+    width: 100%;
   }
 
   @media screen and (min-width: 540px){

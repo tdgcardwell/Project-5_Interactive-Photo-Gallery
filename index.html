@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Photo Gallery</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -13,48 +18,41 @@
         <input type="text" name="search" placeholder="Search" id="search" class="search">
       </div>
 
-      <div class="photo-grid">
+      <div class="photo-grid gallery">
 
-        <div class="photo-box">
-          <img src="photos/thumbnails/01.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/02.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/03.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/04.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/05.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/06.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/07.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/08.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/09.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/10.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/11.jpg" alt="">
-        </div>
-        <div class="photo-box">
-          <img src="photos/thumbnails/12.jpg" alt="">
-        </div>
+        <a href="photos/01.jpg" title="I love hay bales. Took this snap on a drive through the countryside past some straw fields."><img src="photos/thumbnails/01.jpg" alt="Hay Bales."></a>
+
+        <img src="photos/thumbnails/02.jpg" alt="">
+
+
+        <img src="photos/thumbnails/03.jpg" alt="">
+
+        <img src="photos/thumbnails/04.jpg" alt="">
+
+        <img src="photos/thumbnails/05.jpg" alt="">
+
+        <img src="photos/thumbnails/06.jpg" alt="">
+
+        <img src="photos/thumbnails/07.jpg" alt="">
+
+        <img src="photos/thumbnails/08.jpg" alt="">
+
+        <img src="photos/thumbnails/09.jpg" alt="">
+
+        <img src="photos/thumbnails/10.jpg" alt="">
+
+        <img src="photos/thumbnails/11.jpg" alt="">
+
+        <img src="photos/thumbnails/12.jpg" alt="">
 
       </div>
 
     </main>
   </body>
   <script src="js/mySearchBar.js"></script>
+  <script>
+window.addEventListener('load', function() {
+  baguetteBox.run('.gallery', 'captions');
+});
+</script>
 </html>
