@@ -1,18 +1,33 @@
 // function
-  // get input from search bar value
-  // convert to lower case
-  // store as variable
+function captionSearch() {
 
-  // create ¿array? of the captions
+  // get input from search bar value
+  let searchString = document.getElementById('searchbar').value
+
+  // convert to lower case, so not case sensitive
+  searchString=searchString.toLowerCase();
+
+  // get each of the a tags, that hold the title trribute with the captions
+  let images = document.getElementsByTagName('a');
 
   // FOR each caption
+  for (i = 0; i < images.length; i++) {
 
-    // IF searchInput to lowercase is NOT included within caption
+    // IF searchString to lowercase is NOT included within caption
+    if (!images[i].getAttribute('title').toLowerCase().includes(searchString)) {
+
       // set class of container to display none
+      images[i].style.display="none";
+
     // ELSE
+    }else {
+
       // display as normal
+      images[i].style.display="block";
+
     //ENDIF
-
   // ENDFOR
-
 // end function
+        }
+    }
+}
