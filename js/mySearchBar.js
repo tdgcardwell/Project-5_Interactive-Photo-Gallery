@@ -1,10 +1,18 @@
+/**
+ * @name mySearchBar
+ * Searches the title attributes and displays only images with matching information.
+ * @author Thomas Cardwell
+ *
+*/
+
+
 // function
 function captionSearch() {
 
   // get input from search bar value
   let searchString = document.getElementById('searchbar').value
 
-  // convert to lower case, so not case sensitive
+  // convert to lower case, so that search is not case sensitive
   searchString=searchString.toLowerCase();
 
   // get each of the a tags, that hold the title trribute with the captions
@@ -16,7 +24,7 @@ function captionSearch() {
     // IF searchString to lowercase is NOT included within caption
     if (!images[i].getAttribute('title').toLowerCase().includes(searchString)) {
 
-      // set class of container to display none
+      // set to display none
       images[i].style.display="none";
 
     // ELSE
@@ -28,6 +36,6 @@ function captionSearch() {
     //ENDIF
   // ENDFOR
 // end function
-        }
     }
+  }
 }

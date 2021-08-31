@@ -345,7 +345,7 @@ template {
 
 /* line 9, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
 main {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto; }
 
 /* line 14, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
@@ -368,7 +368,7 @@ main {
   padding: 1rem;
   border-radius: 10px;
   border: 2px solid #ccc;
-  width: 50%;
+  width: 55%;
   color: #ccc;
   transition: width 1s, color 1s; }
   /* line 39, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
@@ -380,33 +380,21 @@ main {
 .photo-grid {
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: 1fr; }
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
   /* line 51, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
+  .photo-grid * {
+    transform: scale(0.99);
+    transition: transform .5s; }
+  /* line 56, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
+  .photo-grid *:hover {
+    transform: scale(1.01); }
+  /* line 60, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
   .photo-grid img {
     border-radius: 10px;
-    width: 100%; }
-  @media screen and (min-width: 540px) {
-    /* line 58, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
-    .photo-grid {
-      grid-template-columns: repeat(2, 1fr); } }
-  @media screen and (min-width: 768px) {
-    /* line 67, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
-    .photo-grid {
-      grid-template-columns: repeat(3, 1fr); } }
-  @media screen and (min-width: 1024px) {
-    /* line 76, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
-    .photo-grid {
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 2rem; }
-      /* line 80, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
-      .photo-grid * {
-        transform: scale(0.99);
-        transition: transform .5s; }
-      /* line 85, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
-      .photo-grid *:hover {
-        transform: scale(1.01); } }
+    width: 100%;
+    max-width: 300px; }
 
-/* line 96, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
+/* line 68, ../../../../../Users/thomascardwell/Main Folder/Techdegree/Project-5_Interactive-Photo-Gallery/Project-5_Interactive-Photo-Gallery/scss/style.scss */
 .sketch {
   min-height: 10vh;
   background-color: slategrey; }

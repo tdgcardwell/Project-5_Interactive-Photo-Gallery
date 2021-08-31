@@ -7,7 +7,7 @@
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1100px;
   margin:auto;
 }
 
@@ -30,7 +30,7 @@ main {
   padding: 1rem;
   border-radius: $corners;
   border: 2px solid #ccc;
-  width:50%;
+  width:55%;
   color: #ccc;
   transition: width 1s,
               color 1s;
@@ -46,49 +46,21 @@ main {
 .photo-grid {
   display: grid;
   grid-gap: $spacing;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  * {
+    transform: scale(.99);
+    transition: transform .5s;
+  }
+
+  *:hover {
+    transform: scale(1.01);
+  }
 
   img {
     border-radius: $corners;
     width: 100%;
-  }
-
-  @media screen and (min-width: 540px){
-
-    & {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-
-  }
-
-  @media screen and (min-width: 768px){
-
-    & {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-
-  }
-
-  @media screen and (min-width: 1024px){
-
-    & {
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: $spacing;
-
-      * {
-        transform: scale(.99);
-        transition: transform .5s;
-      }
-
-      *:hover {
-        transform: scale(1.01);
-      }
-
-    }
-
-
+    max-width: 300px;
   }
 
 }
